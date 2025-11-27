@@ -1,0 +1,220 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3</title>
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/flexboxes.css">
+    <link rel="stylesheet" href="assets/nav.css">
+    <link rel="stylesheet" href="assets/typography.css">
+</head>
+<body>
+
+  <!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamburger Menu met Dropdown</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Hamburger icoon */
+    .hamburger {
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    .hamburger div {
+        width: 100%;
+        height: 5px;
+        background-color: #a35353;
+    }
+
+    /* Navigatiebalk */
+    nav {
+        display: none;
+        background-color: #a35353;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex; 
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    nav ul li a:hover {
+        background-color: #a35353;
+    }
+
+    /* Dropdown content */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        background-color: #a35353;
+        min-width: 160px;
+        z-index: 1000;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #111;
+    }
+
+    /* Pijltje naast Weken */
+    .arrow {
+        margin-left: 5px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        transition: transform 0.2s;
+    }
+
+    /* Draai pijltje bij open dropdown */
+    .dropdown.open .arrow {
+        transform: rotate(-135deg);
+    }
+</style>
+</head>
+<body>
+
+<!-- Hamburger icoon -->
+<div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<!-- Navigatiebalk -->
+<nav id="navMenu">
+    <ul>
+        <li><a href="index.html">Startpagina</a></li>
+
+        <!-- Dropdown Weken -->
+        <li class="dropdown" id="weeksDropdown">
+            <a>Weken <span class="arrow"></span></a>
+            <div class="dropdown-content">
+                <a href="week1.html">Week 1</a>
+                <a href="week2.html">Week 2</a>
+                <a href="week3.html">Week 3</a>
+                <a href="week4.html">Week 4</a>
+                <a href="week4.html">Week 5</a>
+                <a href="week6.html">Week 6</a>
+                <a href="week7.html">week 7</a>
+                <a href="week8.html">week 8</a>
+                <a href="week9.html">week 9</a>
+            </div>
+        </li>
+
+        <li><a href="contact.html">Contacten</a></li>
+    </ul>
+</nav>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const weeksDropdown = document.getElementById('weeksDropdown');
+
+    // Toggle navigatiebalk
+    hamburger.addEventListener('click', () => {
+        navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
+    });
+
+    // Toggle dropdown Weken
+    weeksDropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const dropdown = weeksDropdown.querySelector('.dropdown-content');
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        weeksDropdown.classList.toggle('open');
+    });
+
+    // Klik buiten dropdown sluit
+    document.addEventListener('click', () => {
+        const dropdown = weeksDropdown.querySelector('.dropdown-content');
+        dropdown.style.display = 'none';
+        weeksDropdown.classList.remove('open');
+    });
+</script>
+
+    <div class="container">
+        <div class="title">
+            Efril Bernaers projectdocumentatie PRTT1
+        </div>
+
+        <div>
+            <ul class="vertical-buttons">
+                <li><a href="index.html"> < Startpagina</a></li>
+            </ul>
+        </div>
+        <page>
+            <h1>lesweek 4</h1> 
+            <h2> 09/10/2025 - 16/10/2025</h2>
+            <h2>Ontwerpfase 2</h2>
+            <h2>Tweede mid-fi schetsen</h2>
+            <h3>OVERZICHTSCHERMEN</h3>
+            <img src="2526_PRTT_BernaersE_Mid-fiprototypes4.png" alt="Mijn foto" width="500" height="300">
+            <h4>Aanpassingen:</h4>
+            <p> - Groene, oranje, rode bollen gebruikt naast de vertrektijd. Dit geeft visueel duidelijk aan of de trein op tijd is, vertraging heeft of geannuleerd is. </p>
+            <p> &rarr; Groene bol= Op tijd </p>
+            <p> &rarr; Oranje bol= Vertraging, er naast staat er op hoeveel minuten vertraging de trein heeft. </p>
+            <p> &rarr; Rode bol= Geannuleerd, rode lijn door de bestemming, tijd, ... om duidelijk te maken dat die trein geannuleerd is.</p>
+            <h3>PERRONSCHERMEN</h3>
+            <img src="2526_PRTT_BernaersE_Mid-fiprototypes5.png" alt="Mijn foto" width="300" height="500">
+            <h4>Aanpassingen: </h4>
+            <p> - Groene, oranje, rode bollen gebruikt naast de vertrektijd. Dit geeft visueel duidelijl aan of de trein op tijd is, vertraging heeft og geannuleerd is.</p>
+            <p> &rarr; Groene bol= Op tijd</p>
+            <p> &rarr; Oranje bol= Vertraging, er naast staat er op hoeveel minuten vertraging de trein heeft.</p>
+            <p> &rarr; Rode bol= Geannuleerd, rode lijn door de bestemming, tijd, ... om duidelijk te maken dat die trein geannuleerd.</p>
+            <h3>WAGONINDELINGSSCHERMEN</h3>
+            <img src="2526_PRTT_BernaersE_Mid-fiprototypes6.png" alt="Mijn foto" width="500" height="300">
+            <h4>Aanpassingen:</h4>
+            <p> - Groene, oranje, rode bollen opnieuw gebruikt naast de vertrektijd.</p>
+            <h2>ChatGpt</h2>
+            <p> Ik heb mijn afbeeldingen van Mid-Fi in pdf op Chatgpt gezet. Dan heb ik gevraagd of hij het in HTML kan omzetten.</p>
+            <p> Dan heeft ChatGpt mij vragen erover gestelt. Ik heb deze beantwoord en dan heeft hij gereageerd.</p>
+                </div>
+            </div>
+        </page>
+    </div>
+</body>
+</html>
+
+<html lang="nl"></html>
