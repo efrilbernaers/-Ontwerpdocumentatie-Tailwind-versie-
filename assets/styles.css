@@ -1,63 +1,50 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Montserrat:wght@100..900&display=swap');
 
 
-body{
-    background-color: antiquewhite;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-image: url('trainbgg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    background-color: rgb(194, 98, 98); 
     color: #161717;
-    height:auto;
-    min-height:100vh;
-    font-family: 'Roboto';
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+
+    height: auto;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
-header{
-    background-color: antiquewhite;
-    font-family: 'Montserrat';
 
-}
-
-pre{
-    overflow: hidden;
-    font-size: .75em;
-}
-
-a{
-    font-weight: bold;
-}
-a:hover {
-    background-color: #161717;
-    color: #ffffff;
-}
-
-/* Container styling */
 .container {
-    font-family: 'Roboto';
-    max-width: 85vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000000;
+    padding: 2em;
+    max-width: 65vw;
     margin-left: auto;
     margin-right: auto;
 }
 
+
 .title {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     font-weight: bold;
     text-transform: capitalize;
     margin-top: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
-h1 {
-    font-family: 'Montserrat';
-    text-transform: uppercase;
-}
-h2 {
-    font-family: 'Montserrat';
-}
-h3 {
-    font-family: 'Montserrat';
-    text-transform: uppercase;
-    font-weight: bold;
-}
+
 
 
